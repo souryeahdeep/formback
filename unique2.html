@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Gupter:wght@400;500;700&family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Style+Script&display=swap');
+  *{
+      margin: 0;padding: 0;
+      box-sizing: border-box;
+  }
+  body{
+       height: 100vh;
+       width: 100vw;
+       font-family: "Bona Nova SC", serif;
+  
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       background-color: rgb(202, 211, 188);
+  }
+  .main{
+      width: 40%; 
+      height: 96%;
+      background-color: #133e87be;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      border-radius: 30px;
+      gap: 10px;
+      flex-direction: column;
+  }
+  .fillUP{
+      border-radius: 0.406vw;
+      background-color: rgba(99, 80, 80, 0.333);
+      border: none;
+      outline: none;
+      height: 43px;
+      font-size: larger;
+      font-family: "Montserrat", sans-serif;
+  
+      padding: 9px;
+  }
+  .schName{
+      display: flex;
+      flex-direction: column;
+      width: 94%;
+      gap: 7px;
+      padding-left: 30px;
+  }
+  #clickBtn{
+      width: 40px;
+      height: 34px;
+  }
+  .Names{
+      display: flex;
+      gap: 10px;
+      
+      width: 100%;
+      flex-direction: row;
+  }
+  .stuName{
+  
+      width: 94%;
+      padding-left: 30px;
+      gap: 7px;
+      display: flex;
+      flex-direction: column;
+  
+  }
+  .checkmark {
+      color: transparent;
+      animation: checkmark 0.5s ease-in-out;
+      
+    }
+    ::placeholder{
+      color: aliceblue;
+    }
+    @keyframes checkmark {
+      0% {
+        color: transparent;
+      }
+      100% {
+        color: rgb(147, 252, 147);
+      }
+    }
+    
+  #user_name{
+      border-radius: 0.406vw;
+      border: none;
+      outline: none;
+      height: 43px;
+      font-family: "Montserrat", sans-serif;
+      background-color: rgba(99, 80, 80, 0.333);
+  
+      width: 84%;
+      font-size: larger;
+      padding: 9px;
+  }
+  .giveit{
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      height: 90%;
+  }
+  .parName, .parNum, .parMail{
+      width: 94%;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      padding-left: 30px;   
+  }
+  .SUBTN{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  ::placeholder{
+       color: rgb(161, 155, 155); 
+      }
+  .SubBTN{
+      font-size: small;
+      background-color: blue;
+      color: aliceblue;
+     display: flex;
+     width: 21%;
+     height: 43px;
+     justify-content: center;
+     border: none;
+     align-items: center;
+     border-radius: 20px;
+  }
+  .passWord{
+    display: flex;
+    flex-direction: column;
+    width: 94%;
+    padding-left: 30px;
+  }
+  .subMIT{
+            text-align: center;
+            
+            
+        }
+        #sub{
+            width: 90px;
+            height: 40px;
+            border: none;
+            border-radius: 15px;
+            color: white;
+            font-family: "Inria Sans", sans-serif;
+            background-color: #0B3F82;
+            cursor: pointer;
+            
+        }
+        .heade{
+           display: flex; justify-content: center;
+
+        }
+        @media screen and (max-width: 480px) and (min-width:320px) {
+          .main{
+             width: 80%;
+             height: 60%;
+          }
+        }
+  </style>
+<body>
+    <div class="main"><form action="/submit" method="post" class="giveit">
+      <div class="heade">
+        <h1>SIGN UP</h1>
+      </div>
+      <div class="stuName">
+        <span>Full Name <span style="color: red">*</span></span>
+        <div class="Names">
+          <input
+            type="text"
+            name="FName"
+            id="user_name"
+            placeholder="First Name"
+            autofocus
+            autocomplete="off"
+            required
+          />
+          <input
+            type="text"
+            name="LName"
+            id="user_name"
+            placeholder="Last Name"
+            autofocus
+            autocomplete="off"
+            required
+          />
+        </div>
+      </div>
+      
+      <div class="parNum">
+        <span>Phone Number<span style="color: red">*</span></span>
+        <input
+          type="number"
+          name="PFNum"
+          id="user_Fname"
+          class="fillUP"
+          placeholder="Phone Number"
+          autofocus
+          autocomplete="off"
+          required
+        />
+      </div>
+      <div class="parMail">
+        <span> Email ID <span style="color: red">*</span></span>
+        <input
+          type="email"
+          name="PFmail"
+          id="user_Fname"
+          class="fillUP"
+          placeholder="Email ID"
+          autofocus
+          autocomplete="off"
+          required
+        />
+      </div>
+      <div class="passWord">
+        <span> Password <span style="color: red">*</span></span>
+        <input
+          type="password"
+          name="PASSWD"
+          id="user_passwd"
+          class="fillUP"
+          placeholder="Type your password"
+          autofocus
+          autocomplete="off"
+          required
+        />
+      </div>
+      <div class="passWord">
+        <span> Confirm Password <span style="color: red">*</span></span>
+        <input
+          type="password"
+          name="PASSWD"
+          id="user_passwd"
+          class="fillUP"
+          placeholder="Confirm your password"
+          autofocus
+          autocomplete="off"
+          required
+        />
+      </div>
+      <div class="subMIT">
+        <button type="button" id="sub">LOGIN</button>
+    </div>
+    </form></div>
+</body>
+</html>
